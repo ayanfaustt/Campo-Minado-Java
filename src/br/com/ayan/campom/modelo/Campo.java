@@ -1,6 +1,5 @@
 package br.com.ayan.campom.modelo;
 
-import br.com.ayan.campom.excecao.ExplosaoException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +50,7 @@ public class Campo {
             aberto = true;
 
             if(minado){
-                throw new ExplosaoException();
+                //TODO implementar nova versão
             }
 
             if(segura()){

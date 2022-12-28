@@ -1,6 +1,5 @@
 package br.com.ayan.campom.modelo;
 
-import br.com.ayan.campom.excecao.ExplosaoException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +28,9 @@ public class Tabuleiro {
                    .filter(c -> c.getLinha() == linha && c.getColuna() == coluna)
                    .findFirst()
                    .ifPresent(c -> c.abrir());
-       } catch (ExplosaoException e){
+       } catch (Exception e){
+           //FIXME Ajustar a implementação do método
+
            campos.forEach(c -> c.setAberto(true));
            throw e;
        }
